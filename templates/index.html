@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+  </style>
+</head>
+
+<body>
+  
+
+
+<table>
+  <tr>
+    <th>Qualification</th>
+    <th>Modules Offered</th>
+    <th>Future Skill Modules</th>
+    <th>Worth</th>
+  </tr>
+ 
+
+  {% for x in range(0,len) %}
+     <tr>
+      <td>{{ course['Qualification'][x] }}</td>
+      <td>{{ course['Module'][x] }}</td>
+      <td>{{ course['Future_Skill_Module'][x] }}</td>
+      <td>{{ course['Worthy'][x] }}</td>
+    </tr>  
+{% endfor %}
+    
+</table>
+
+</body>
+
+</html>
